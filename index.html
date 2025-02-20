@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teka-teki Lucu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="loginForm">
+            <h1>Login</h1>
+            <div class="form-control">
+                <input type="text" id="username" placeholder="Nama" required>
+            </div>
+            <div class="form-control">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button class="btn" onclick="login()">Masuk</button>
+        </div>
+
+        <div id="quiz" class="hidden">
+            <h2>Teka-teki Lucu - Level 1</h2>
+            <div id="questions"></div>
+            <button class="btn" onclick="checkAnswers(1)">Periksa Jawaban</button>
+            <div id="result" class="result hidden"></div>
+            <button class="btn hidden" id="nextLevelBtn" onclick="nextLevel()">Lanjut ke Level 2</button>
+        </div>
+
+        <div id="quizLevel2" class="hidden">
+            <h2>Teka-teki Lucu - Level 2</h2>
+            <div id="questionsLevel2"></div>
+            <button class="btn" onclick="checkAnswers(2)">Periksa Jawaban</button>
+            <div id="resultLevel2" class="result hidden"></div>
+            <button class="btn hidden" id="nextLevelBtn2" onclick="nextLevel2()">Lanjut ke Level 3</button>
+            <button class="btn" onclick="backToMenu()">Kembali ke Menu Awal</button>
+        </div>
+
+        <div id="quizLevel3" class="hidden">
+            <h2>Teka-teki Lucu - Level 3</h2>
+            <div id="questionsLevel3"></div>
+            <button class="btn" onclick="checkAnswers(3)">Periksa Jawaban</button>
+            <div id="resultLevel3" class="result hidden"></div>
+            <button class="btn hidden" id="finishBtn" onclick="finish()">Finish</button>
+        </div>
+
+        <div id="finalResult" class="hidden">
+            <h2>Skor Akhir</h2>
+            <div id="finalScore" class="result"></div>
+            <div id="award" class="result"></div>
+            <button class="btn" id="restartBtn" onclick="restart()">Kembali ke Level 1</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
